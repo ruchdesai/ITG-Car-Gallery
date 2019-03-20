@@ -1,0 +1,35 @@
+<h1>Jaguar {{car?.id | uppercase}}</h1>
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th>Car Model</th>
+            <td>{{car?.id | uppercase}}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{car?.description}}</td>
+        </tr>
+        <tr>
+            <th>Price</th>
+            <td>{{car?.price}}</td>
+        </tr>
+        <tr>
+            <th>Passengers</th>
+            <td>{{car?.meta.passengers}}</td>
+        </tr>
+        <tr>
+            <th>Drivetrain</th>
+            <td><span *ngFor="let dt of car?.meta.drivetrain">{{dt}}, </span></td>
+        </tr>
+        <tr>
+            <th>Body Style</th>
+            <td><span *ngFor="let bs of car?.meta.bodystyles">{{bs | titlecase}}, </span></td>
+        </tr>
+        <tr>
+            <th>Emission</th>
+            <td>CO2 Emissions {{car?.meta.emissions.value}} g/km</td>
+        </tr>
+    </table>
+</div>
+
+<br><a routerLink="/">Go back to car models</a>

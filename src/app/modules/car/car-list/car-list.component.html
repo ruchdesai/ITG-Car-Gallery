@@ -1,0 +1,16 @@
+<div class="row text-center">
+	<div *ngFor="let car of cars" class="col-lg-3 col-md-6 clearfix no-padding">
+		<a [routerLink]="['/car/', car.id]">
+			<div class="row car-wrapper">
+				<div class="car-image col-md-12 col-4" *ngFor="let m of car.media">
+					<img src="assets/{{m.url}}" alt="car.id" width="100%">
+				</div>
+				<div class="text-details align-self-center col-md-12 col-8">
+					<p class="car_name"><span>{{car_name}} {{car.id | uppercase}}</span></p>
+					<p class="car_price">Price from £76,350</p>
+					<p class="car_desc">The pinnacle of refined capability</p>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>

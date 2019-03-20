@@ -2,15 +2,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
+import { CarListComponent } from './modules/car/car-list/car-list.component';
+import { CarDetailComponent } from './modules/car/car-detail/car-detail.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CarListComponent,
+    CarDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
