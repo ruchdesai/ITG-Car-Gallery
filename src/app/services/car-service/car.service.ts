@@ -7,8 +7,8 @@ import { environment } from '../../../environments/environment';
 export class CarService {
 
     API_URL = environment.API_ENDPOINT;
-    GET_ALL_CARS = this.API_URL + '/api/vehicles/';
-    GET_CAR_DETAIL = this.API_URL + '/api/vehicle/'
+    GET_ALL_CARS = this.API_URL + 'vehicles/';
+    GET_CAR_DETAIL = this.API_URL + 'vehicle/'
 
     constructor(private http: HttpClient) { }
 
@@ -17,6 +17,6 @@ export class CarService {
     }
 
     getCar(id): Observable<any> {
-        return this.http.get(this.GET_CAR_DETAIL + id)
+        return this.http.get(this.GET_CAR_DETAIL + id);
     }
 }

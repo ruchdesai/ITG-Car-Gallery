@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  API_ENDPOINT: 'https://itg-prd-recruit.appspot.com'
+  API_ENDPOINT: 'https://itg-prd-recruit.appspot.com/api/'
 };
