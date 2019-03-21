@@ -6,14 +6,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
@@ -22,6 +14,14 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Approach taken
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Implemented home page as carlist page to show list of cars, information for each car are dynamic except for price and description which are static coz didn't have price and description from api call for cars list getCars() (/api/vehicles).
+
+But once you navigate to car details page by clicking on specific model all the information displayed as dynamic and from api call getCar() (/api/vehicle/:id).
+
+Design has been implemented exactly as requested.
+
+Unit test has been written to cover 100% of code coverage.
+
+e2e test written for just the hompage title static content.
